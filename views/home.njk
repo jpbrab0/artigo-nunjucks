@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>CRUD com nunjucks</h1>
+    <form action="/post" method="post">
+        <input type="text" placeholder="Seu nome." name="name">
+        <input type="email" name="email" placeholder="Seu email.">
+        <button type="submit">Enviar!</button>
+    </form>
+    <div class="dados">
+        <ul>
+            <h1>Dados</h1>
+            {% for dados in data %}
+                <ul>
+                    <li>Nome:{{dados.name}}</li>
+                    <li>Email:{{dados.email}}</li>
+                </ul>
+            {% endfor %}
+            
+        </ul>
+    </div>
+</body>
+</html>
