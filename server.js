@@ -22,7 +22,7 @@ server.post("/post", (request, response) => {
 
     for (key of keys) {
         if (request.body[key] == '') {
-            return res.send("Please, fill all fields")
+            return response.send("Please, fill all fields")
         }
     }
     let { name, email } = request.body
